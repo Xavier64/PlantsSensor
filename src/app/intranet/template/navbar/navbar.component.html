@@ -1,0 +1,10 @@
+<nav class="bg-green-950">
+    <ul>
+      <li *ngFor="let navbar of navbars">
+        <a [routerLink]="[navbar.url]" [title]="">
+          <img [src]="navbar.img" [alt]=""/>
+          <p class="text-white" *ngIf="navbar.name && navbar.name.length > 0">{{ navbar.name }}</p>
+        </a>
+      </li>
+    </ul>
+  </nav>

@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './intranet/home/home.component';
+
 
 const routes: Routes = [
-  {path:'', component:HomeComponent},
-  {path:''}
+  {path:'intranet', loadChildren: () =>  import('./intranet/intranet.module').then( m => m.IntranetModule)},
 ];
 
 @NgModule({
